@@ -38,11 +38,20 @@ const RegisterForm = () => {
           {step === 2 && <StepOwnerData />}
         </div>
         {step < 2 ? (
-          <button type="button" onClick={goStepSubmit}>
-            GO
+          <button
+            type="button"
+            onClick={goStepSubmit}
+            className="bg-primary-pink-500 w-26 h-10 rounded-full font-bold border-b-4 border-primary-pink-700 shadow-2xl "
+          >
+            Go
           </button>
         ) : (
-          <button type="submit">REGISTER</button>
+          <button
+            type="submit"
+            className="bg-primary-pink-500 w-26 h-10 rounded-full font-bold border-b-4 border-primary-pink-700 shadow-2xl "
+          >
+            Register
+          </button>
         )}
       </form>
     </FormProvider>

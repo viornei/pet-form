@@ -13,6 +13,8 @@
   --color-foreground: var(--foreground);
   --color-primary-pink-100: oklch(0.9826 0.008655 8.5405);
   --color-primary-pink-500: oklch(0.8474 0.0858 9.09);
+  --color-primary-pink-700: oklch(0.7166 0.0723 8.96);
+  --color-custom-gray-100: oklch(0.1475 0.031 103.29 / 5.1%);
   --font-sans: var(--font-lora);
   --font-heading: var(--font-libre-baskerville);
 }
@@ -30,19 +32,16 @@ body {
   font-family: var(--font-sans);
 }
 input {
-  border: solid rgb(176, 171, 171) 1px;
-  border-radius: 6px;
+  border: none;
+  border-radius: 12px;
   padding: 4px;
+  padding-left: 8px;
   font-family: var(--font-sans);
+  min-height: 36px;
 }
 
 button {
-  background-color: var(--color-primary-pink-500);
-  border: 1px solid #ffffff;
-  border-radius: 6.25rem;
-  color: #ffffff;
   padding: 4px;
-  width: 8rem;
-  font-weight: 600px;
+  min-width: 5rem;
   font-family: var(--font-sans);
 }
