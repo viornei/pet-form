@@ -3,13 +3,18 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --font-sans: var(--font-lora);
+  --font-heading: var(--font-libre-baskerville);
 }
 
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary-pink-100: oklch(0.9826 0.008655 8.5405);
+  --color-primary-pink-500: oklch(0.8474 0.0858 9.09);
+  --font-sans: var(--font-lora);
+  --font-heading: var(--font-libre-baskerville);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,20 +27,22 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
 input {
   border: solid rgb(176, 171, 171) 1px;
   border-radius: 6px;
   padding: 4px;
+  font-family: var(--font-sans);
 }
 
 button {
-  background-color: salmon;
+  background-color: var(--color-primary-pink-500);
   border: 1px solid #ffffff;
-  border-radius: 0.5rem;
+  border-radius: 6.25rem;
   color: #ffffff;
   padding: 4px;
   width: 8rem;
   font-weight: 600px;
+  font-family: var(--font-sans);
 }

@@ -3,16 +3,20 @@ import { FormProvider, useForm } from "react-hook-form";
 import StepPetData from "./steps/StepPetData";
 import StepOwnerData from "./steps/StepOwnerData";
 import { useState } from "react";
-import styles from "./RegisterForm.module.css";
 
-type TData = {
+type PetData = {
   petName: string;
   petType: "cat" | "dog";
   petAge: number;
+};
+
+type OwnerData = {
   ownerName: string;
   ownerEmail: string;
   ownerTel: number;
 };
+
+type TData = PetData & OwnerData;
 
 const RegisterForm = () => {
   const methods = useForm<TData>();
@@ -27,24 +31,18 @@ const RegisterForm = () => {
     <FormProvider {...methods}>
       <form
         onSubmit={methods.handleSubmit(onSubmit)}
-        className={styles.formWrapper}
+        className="flex flex-col items-center gap-8 py-6 w-80"
       >
         <div>
           {step === 1 && <StepPetData />}
           {step === 2 && <StepOwnerData />}
         </div>
         {step < 2 ? (
-          <button
-            type="button"
-            onClick={goStepSubmit}
-            className={styles.buttonForm}
-          >
+          <button type="button" onClick={goStepSubmit}>
             GO
           </button>
         ) : (
-          <button type="submit" className={styles.buttonForm}>
-            REGISTER
-          </button>
+          <button type="submit">REGISTER</button>
         )}
       </form>
     </FormProvider>

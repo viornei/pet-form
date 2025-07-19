@@ -1,34 +1,32 @@
 import { useFormContext } from "react-hook-form";
-import styles from "../RegisterForm.module.css";
 const StepPetData = () => {
   const { register } = useFormContext();
   return (
-    <div>
-      <label className={styles.stepInput}>
-        PET NAME
+    <div className="flex flex-col w-70 gap-4">
+      <label className="flex flex-col">
+        Pet name
         <input type="text" {...register("petName", { required: true })} />
       </label>
-      <div className={styles.stepRadioBlock}>
-        <label className={styles.stepRadio}>
+      <div className="flex gap-4">
+        <label className="flex gap-2">
           <input
             type="radio"
             value="dog"
             {...register("petType", { required: true })}
           />
-          DOG
+          Dog
         </label>
-        <label className={styles.stepRadio}>
-          {" "}
+        <label className="flex gap-2">
           <input
             type="radio"
             value="cat"
             {...register("petType", { required: true })}
           />
-          CAT
+          Cat
         </label>
       </div>
-      <label className={styles.stepInput}>
-        PET AGE
+      <label className="flex flex-col">
+        Pet age
         <input
           type="number"
           min={0}

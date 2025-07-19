@@ -1,21 +1,24 @@
 import { useFormContext } from "react-hook-form";
-import styles from "../RegisterForm.module.css";
 
 const StepOwnerData = () => {
   const { register } = useFormContext();
   return (
-    <div>
-      <label className={styles.stepInput}>
-        YOUR NAME
+    <div className="flex flex-col w-70 gap-4">
+      <label className="flex flex-col">
+        Your name
         <input type="text" {...register("ownerName", { required: true })} />
       </label>
-      <label className={styles.stepInput}>
-        EMAIL
+      <label className="flex flex-col">
+        Email
         <input type="email" {...register("ownerEmail", { required: true })} />
       </label>
-      <label className={styles.stepInput}>
-        PHONE
+      <label className="flex flex-col">
+        Phone
         <input type="tel" {...register("ownerTel")} />
+      </label>
+      <label className="flex flex-col">
+        Password
+        <input type="password" {...register("password")} />
       </label>
     </div>
   );
