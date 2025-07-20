@@ -3,6 +3,7 @@ import { FormProvider, useForm } from "react-hook-form";
 import StepPetData from "./steps/StepPetData";
 import StepOwnerData from "./steps/StepOwnerData";
 import { useState } from "react";
+import ActionButton from "@/components/ui/ActionButton";
 
 type PetData = {
   petName: string;
@@ -38,20 +39,11 @@ const RegisterForm = () => {
           {step === 2 && <StepOwnerData />}
         </div>
         {step < 2 ? (
-          <button
-            type="button"
-            onClick={goStepSubmit}
-            className="bg-primary-pink-500 w-26 h-10 rounded-full font-bold border-b-4 border-primary-pink-700 shadow-2xl "
-          >
+          <ActionButton type="button" onClick={goStepSubmit}>
             Go
-          </button>
+          </ActionButton>
         ) : (
-          <button
-            type="submit"
-            className="bg-primary-pink-500 w-26 h-10 rounded-full font-bold border-b-4 border-primary-pink-700 shadow-2xl "
-          >
-            Register
-          </button>
+          <ActionButton type="submit">Register</ActionButton>
         )}
       </form>
     </FormProvider>

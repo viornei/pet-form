@@ -4,7 +4,7 @@ const StepPetData = () => {
   return (
     <div className="flex flex-col w-100 gap-4">
       <label className="flex flex-col gap-1">
-        <p className="text-sm">Pet name</p>
+        <span className="text-sm">Pet name</span>
         <input
           type="text"
           {...register("petName", { required: true })}
@@ -20,7 +20,7 @@ const StepPetData = () => {
             {...register("petType", { required: true })}
             className="bg-custom-gray-100"
           />
-          <p className="text-sm"> Dog </p>
+          <span className="text-sm"> Dog </span>
         </label>
         <label className="flex gap-1 items-center">
           <input
@@ -29,11 +29,11 @@ const StepPetData = () => {
             value="cat"
             {...register("petType", { required: true })}
           />
-          <p className="text-sm"> Cat</p>
+          <span className="text-sm"> Cat</span>
         </label>
       </div>
       <label className="flex flex-col gap-1">
-        <p className="text-sm">Pet age</p>
+        <span className="text-sm">Pet age</span>
         <input
           type="number"
           min={0}
@@ -43,10 +43,10 @@ const StepPetData = () => {
         />
       </label>
       <div className="flex flex-col gap-1">
-        <p className="text-sm">Important info</p>
-        <div className="grid grid-cols-2 gap-x-12 gap-y-1">
+        <span className="text-sm">Behavioral traits</span>
+        <div className="grid grid-cols-2 gap-x-10 gap-y-0.5 text-base">
           <label className="flex items-center gap-2 justify-between">
-            <p className="text-sm">Zoo agression</p>
+            <span>Zoo agression</span>
             <input
               type="checkbox"
               {...register("petAgression")}
@@ -54,7 +54,7 @@ const StepPetData = () => {
             />
           </label>
           <label className="flex items-center gap-2 justify-between">
-            <p className="text-sm">People agression</p>
+            <span>People agression</span>
             <input
               type="checkbox"
               {...register("petPeopleAgression")}
@@ -62,7 +62,7 @@ const StepPetData = () => {
             />
           </label>
           <label className="flex items-center gap-2 justify-between">
-            <p className="text-sm">Separation anxiety</p>
+            <span>Separation anxiety</span>
             <input
               type="checkbox"
               {...register("petAnxiety")}
@@ -70,10 +70,26 @@ const StepPetData = () => {
             />
           </label>
           <label className="flex items-center gap-2 justify-between">
-            <p className="text-sm">Health Problem</p>
+            <span>Health Problem</span>
             <input
               type="checkbox"
               {...register("petHealthProblem")}
+              className="bg-custom-gray-100 size-3"
+            />
+          </label>
+          <label className="flex items-center gap-2 justify-between">
+            <span>Chewing</span>
+            <input
+              type="checkbox"
+              {...register("petChewing")}
+              className="bg-custom-gray-100 size-3"
+            />
+          </label>
+          <label className="flex items-center gap-2 justify-between">
+            <span>Excessive barking</span>
+            <input
+              type="checkbox"
+              {...register("petBarking")}
               className="bg-custom-gray-100 size-3"
             />
           </label>
