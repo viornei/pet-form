@@ -5,12 +5,14 @@ const DatePicker = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
 
   return (
-    <Calendar
-      mode="single"
-      selected={date}
-      onSelect={setDate}
-      className="rounded-lg border"
-    />
+    <div>
+      <Calendar
+        mode="single"
+        selected={date}
+        onSelect={setDate}
+        className="rounded-lg border max-w-200"
+      />
+    </div>
   );
 };
 export default DatePicker;

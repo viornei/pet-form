@@ -17,7 +17,7 @@ export default function RootLayout({
       lang="en"
       className={`${libreBaskerville.variable} ${lora.variable} antialiased`}
     >
-      <body>{children}</body>
+      <body >{children}</body>
     </html>
   );
 }

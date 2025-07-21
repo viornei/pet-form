@@ -2,11 +2,11 @@ import ServiceCard from "./serviceCard/ServiceCard";
 
 const ServiseSection = () => {
   return (
-    <div className="flex flex-col items-center bg-primary-pink-100 w-full py-25 px-12 gap-20">
+    <div className="flex flex-col  items-center bg-primary-pink-100 w-full py-25 px-12 gap-20">
       <h2 className="text-5xl text-center max-w-160">
         Explore Our Tailored Pet Sitting Services for Every Furry Friend
       </h2>
-      <div className="flex gap-4 w-full  justify-between">
+      <div className="flex gap-4 w-full max-w-320  justify-between">
         <ServiceCard
           imgSrc="/home/side-view-smiley-woman-dog.webp"
           alt="dog"
