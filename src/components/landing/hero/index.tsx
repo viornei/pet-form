@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ActionButton from "../ui/ActionButton";
+import ActionButton from "../../ui/ActionButton";
 
 const HeroSection = () => {
   return (
