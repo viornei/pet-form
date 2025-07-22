@@ -6,6 +6,7 @@ import ServiceSection from "@/components/landing/servicesSection/ServicesSection
 import TestimonialsSection from "@/components/landing/testimonials/TestimonialsSection";
 
 export default function Home() {
+  
   return (
     <>
       <HeroSection />
