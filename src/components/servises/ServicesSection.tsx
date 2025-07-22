@@ -2,7 +2,10 @@ import ServiceCard from "./serviceCard/ServiceCard";
 
 const ServiseSection = () => {
   return (
-    <div className="flex flex-col  items-center bg-primary-pink-100 w-full py-25 px-12 gap-20">
+    <section
+      id="services"
+      className="flex flex-col items-center bg-primary-pink-100 w-full py-25 px-12 gap-20 scroll-mt-24"
+    >
       <h2 className="text-5xl text-center max-w-160">
         Explore Our Tailored Pet Sitting Services for Every Furry Friend
       </h2>
@@ -26,7 +29,7 @@ const ServiseSection = () => {
           serviceDescription="Our cat sitters provide love and attention in a familiar environment."
         />
       </div>
-    </div>
+    </section>
   );
 };
 export default ServiseSection;
