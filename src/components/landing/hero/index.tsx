@@ -26,6 +26,7 @@ const HeroSection = () => {
       </div>
       <div className="h-150 overflow-hidden  rounded-2xl">
         <Image
+          priority
           src="/dog-1868871_1280.webp"
           alt="happy dog"
           width={1280}

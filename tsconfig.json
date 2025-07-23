@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/components/landing/auth/AuthSection.tsx"
-  ],
+, "src/providers/StoryblokProvider.tsx"  ],
   "exclude": ["node_modules"]
 }

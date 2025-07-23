@@ -35,8 +35,11 @@ const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<null | number>(null);
 
   return (
-    <section id="faq" className=" bg-primary-pink-100 w-full  gap-16  py-25 px-12">
-      <div className="flex items-center flex-col gap-20  w-full mx-auto">
+    <section
+      id="faq"
+      className=" bg-primary-pink-100 w-full  gap-16  py-25 px-12 mb-20"
+    >
+      <div className="flex items-center flex-col gap-16  w-full mx-auto">
         <h2 className="text-5xl mb-8 mt-2 text-center">FAQs</h2>
         <div className="max-w-160  w-full mx-auto flex flex-col gap-6">
           {faqs.map((faq, index) => (
@@ -45,7 +48,7 @@ const FaqSection = () => {
               className=" w-full rounded-xl justify-center  transition-all"
             >
               <button
-                className="flex  w-full h-20  p-4  text-xl justify-between items-center"
+                className="flex  w-full h-8  p-4  text-xl justify-between items-center"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
                 {faq.question}
@@ -63,7 +66,7 @@ const FaqSection = () => {
                 </span>
               </button>
               {openIndex === index && (
-                <div className=" pb-4 text-lg text-gray-700 leading-relaxed">
+                <div className=" py-4 text-lg text-gray-700 leading-relaxed">
                   {faq.answer}
                 </div>
               )}

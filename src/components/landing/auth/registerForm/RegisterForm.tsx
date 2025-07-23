@@ -15,6 +15,7 @@ type OwnerData = {
   ownerName: string;
   ownerEmail: string;
   ownerTel: number;
+  password: string;
 };
 
 type TData = PetData & OwnerData;
