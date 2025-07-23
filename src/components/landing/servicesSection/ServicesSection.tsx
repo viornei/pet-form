@@ -1,8 +1,11 @@
 import ServiceCard from "./serviceCard/ServiceCard";
-import { TServiceSection } from "./types";
+import { TServiceBlock } from "./types";
+type Props = {
+  blocks: TServiceBlock[];
+};
 
-const ServiceSection = ({ data }: TServiceSection) => {
-  const block = data?.content?.body?.[0];
+const ServiceSection = ({ blocks }: Props) => {
+  const block = blocks[0];
 
   if (!block) return null;
   return (

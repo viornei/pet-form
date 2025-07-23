@@ -9,6 +9,6 @@ const fetchLandingPageData = async () => {
 };
 const LandingPage = async () => {
   const servicesData = await fetchLandingPageData();
-  return <Landing services={servicesData} />;
+  return <Landing services={servicesData.content.body} />;
 };
 export default LandingPage;

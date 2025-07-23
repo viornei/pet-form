@@ -1,15 +1,3 @@
-export type TServiceSection = {
-  data: {
-    content: {
-      body: TServiceBlock[];
-    };
-  };
-};
-export type TServiceBlock = {
-  Title: string;
-  Services: TService[];
-};
-
 export type TService = {
   serviceName: string;
   serviceDescription: string;
@@ -18,3 +6,11 @@ export type TService = {
     alt: string;
   };
 };
+
+export type TServiceBlock = {
+  Title: string;
+  Services: TService[];
+};
+
+
+export type TServiceSection = TServiceBlock[];
