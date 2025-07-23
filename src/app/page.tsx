@@ -7,8 +7,8 @@ const fetchLandingPageData = async () => {
   });
   return response.data.story;
 };
-const LandingPage = async () => {
+const Page = async () => {
   const servicesData = await fetchLandingPageData();
   return <Landing services={servicesData.content.body} />;
 };
-export default LandingPage;
+export default Page;
