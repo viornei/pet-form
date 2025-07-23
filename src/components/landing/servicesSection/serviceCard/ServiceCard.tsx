@@ -20,6 +20,7 @@ const ServiceCard = ({
         height={240}
         className="rounded-xl"
         placeholder="empty"
+        loading="lazy"
       />
       <h2 className="text-2xl max-w-80">{serviceName}</h2>
       <p className="text-sm max-w-80">{serviceDescription}</p>
