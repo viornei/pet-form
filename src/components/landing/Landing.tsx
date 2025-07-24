@@ -9,16 +9,16 @@ type TStoryData = {
   services: TServiceSection;
 };
 
-export const Landing = ({ services }: TStoryData) => {
+export const LandingPage = ({ services }: TStoryData) => {
   return (
-    <>
+    <div className="h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth">
       <HeroSection />
       <ServiceSection blocks={services} />
       <AuthSection />
       <TestimonialsSection />
       <CalendarSection />
       <FaqSection />
-    </>
+    </div>
   );
 };
-export default Landing;
+export default LandingPage;

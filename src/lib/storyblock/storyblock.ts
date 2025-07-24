@@ -1,4 +1,4 @@
-import { Landing } from "@/components/landing/Landing";
+import LandingPage from "@/components/landing/Landing";
 import ServiceSection from "@/components/landing/servicesSection/ServicesSection";
 import {
   apiPlugin,
@@ -11,7 +11,7 @@ storyblokInit({
   accessToken: process.env.STORYBLOK_TOKEN,
   use: [apiPlugin],
   components: {
-    landing: Landing,
+    landing: LandingPage,
     services_section: ServiceSection,
   },
   enableFallbackComponent: true,

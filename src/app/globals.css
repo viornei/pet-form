@@ -66,6 +66,6 @@ input {
 
 button {
   padding: 4px;
-  min-width: 5rem;
+  min-width: 3rem;
   font-family: var(--font-sans);
 }

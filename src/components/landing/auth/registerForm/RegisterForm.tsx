@@ -4,11 +4,19 @@ import StepPetData from "./steps/StepPetData";
 import StepOwnerData from "./steps/StepOwnerData";
 import { useState } from "react";
 import ActionButton from "@/components/ui/ActionButton";
+import { createClient } from "@/lib/supabase/supabaseClient";
+import { useRouter } from "next/navigation";
 
 type PetData = {
   petName: string;
   petType: "cat" | "dog";
-  petAge: number;
+  petBirthDate: Date;
+  petAnimalAgression: boolean;
+  petPeopleAgression: boolean;
+  petAnxiety: boolean;
+  petHealthProblem: boolean;
+  petChewing: boolean;
+  petBarking: boolean;
 };
 
 type OwnerData = {
@@ -23,9 +31,42 @@ type TData = PetData & OwnerData;
 const RegisterForm = () => {
   const methods = useForm<TData>();
   const [step, setStep] = useState(1);
-  const onSubmit = (data: TData) => {
-    console.log(data);
+
+  const router = useRouter();
+
+  const supabase = createClient();
+  const onSubmit = async (data: TData) => {
+    const { ownerEmail, password } = data;
+
+    const { error } = await supabase.auth.signUp({
+      email: ownerEmail,
+      password,
+      options: {
+        emailRedirectTo: `${location.origin}/confirm-email/success`,
+        data: {
+          ownerName: data.ownerName,
+          ownerTel: data.ownerTel,
+          petName: data.petName,
+          petType: data.petType,
+          petBirthDate: data.petBirthDate,
+          petAnimalAgression: data.petAnimalAgression,
+          petPeopleAgression: data.petPeopleAgression,
+          petAnxiety: data.petAnxiety,
+          petHealthProblem: data.petHealthProblem,
+          petChewing: data.petChewing,
+          petBarking: data.petBarking,
+        },
+      },
+    });
+
+    if (error) {
+      alert(error.message || "Signup error");
+      return;
+    }
+
+    router.push("/confirm-email");
   };
+
   const goStepSubmit = methods.handleSubmit(() => {
     setStep(step + 1);
   });

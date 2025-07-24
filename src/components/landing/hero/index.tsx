@@ -3,7 +3,7 @@ import ActionButton from "../../ui/ActionButton";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col items-center w-full bg-primary-pink-100 pb-25 px-12 w-">
+    <div className="flex flex-col items-center w-full bg-primary-pink-100 pb-25 px-12  h-screen snap-center justify-center">
       <div className="flex w-320 justify-between items-center gap-6 py-8">
         <h1 className="text-6xl min-w-100  wrap-break-word leading-18">
           Your Trusted Companion for Pet Sitting

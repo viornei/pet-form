@@ -17,7 +17,7 @@ const Carousel = ({ images }: Props) => {
   };
   return (
     <div className="relative w-full max-w-190 mx-auto py-25 ">
-      <div className="overflow-hidden relative h-55">
+      <div className="overflow-hidden relative h-50">
         {images.map((image, index) => (
           <div
             key={index}
