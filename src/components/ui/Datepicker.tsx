@@ -23,6 +23,7 @@ const DatePicker = () => {
         booked: "[&>button]:line-through opacity-100",
       }}
       className="rounded-lg border shadow-lg"
+      
     />
   );
 };
