@@ -1,4 +1,4 @@
-import Landing from "@/components/landing/Landing";
+import LandingPage from "@/components/landing/Landing";
 import { getStoryblokApi } from "@/lib/storyblock/storyblock";
 const fetchLandingPageData = async () => {
   const client = getStoryblokApi();
@@ -9,6 +9,6 @@ const fetchLandingPageData = async () => {
 };
 const Page = async () => {
   const servicesData = await fetchLandingPageData();
-  return <Landing services={servicesData.content.body} />;
+  return <LandingPage services={servicesData.content.body} />;
 };
 export default Page;

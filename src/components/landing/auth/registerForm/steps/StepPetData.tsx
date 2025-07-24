@@ -33,23 +33,33 @@ const StepPetData = () => {
         </label>
       </div>
       <label className="flex flex-col gap-1">
-        <span className="text-sm">Pet age</span>
+        <span className="text-sm">Pet Birth Date</span>
         <input
-          type="number"
-          min={0}
-          max={25}
-          {...register("petAge", { required: true })}
+          type="date"
+          {...register("petBirthDate", { required: true })}
           className="bg-custom-gray-100"
         />
       </label>
+        {/* <Controller
+          name="petBirthDate"
+          control={control}
+          render={({ field }) => (
+            <Calendar
+              mode="single"
+              selected={field.value || new Date()}
+              onSelect={field.onChange}
+              className="rounded-lg border"
+            />
+          )}
+        /> */}
       <div className="flex flex-col gap-1">
         <span className="text-sm">Behavioral traits</span>
         <div className="grid grid-cols-2 gap-x-10 gap-y-0.5 text-base">
           <label className="flex items-center gap-2 justify-between">
-            <span>Zoo agression</span>
+            <span> Animal agression</span>
             <input
               type="checkbox"
-              {...register("petAgression")}
+              {...register("petAnimalgression")}
               className="bg-custom-gray-100 size-3"
             />
           </label>

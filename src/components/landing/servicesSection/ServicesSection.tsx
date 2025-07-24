@@ -11,7 +11,7 @@ const ServiceSection = ({ blocks }: Props) => {
   return (
     <section
       id="services"
-      className="flex flex-col items-center bg-primary-pink-100 w-full py-25 px-12 gap-20 scroll-mt-24"
+      className="flex flex-col items-center bg-primary-pink-100 w-full py-14 px-12 gap-20  h-screen snap-center justify-center"
     >
       <h2 className="text-5xl text-center max-w-160">{block.Title}</h2>
       <div className="flex gap-4 w-full max-w-320  justify-between">
