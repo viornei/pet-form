@@ -3,7 +3,7 @@ import { Controller, useFormContext } from "react-hook-form";
 const StepPetData = () => {
   const { register, control } = useFormContext();
   return (
-    <div className="flex flex-col w-100 gap-4">
+    <div className="flex flex-col w-80 md:w-100 gap-4">
       <label className="flex flex-col gap-1">
         <span className="text-sm">Pet name</span>
         <input
@@ -41,7 +41,7 @@ const StepPetData = () => {
       />
       <div className="flex flex-col gap-1">
         <span className="text-sm">Behavioral traits</span>
-        <div className="grid grid-cols-2 gap-x-10 gap-y-0.5 text-base">
+        <div className="grid grid-cols-2 gap-x-10 gap-y-0.5 text-sm md:text-base">
           <label className="flex items-center gap-2 justify-between">
             <span> Animal agression</span>
             <input

@@ -12,7 +12,7 @@ const ServiceCard = ({
   alt,
 }: Props) => {
   return (
-    <div className="flex flex-col w-full  max-w-100 items-center text-center gap-2 ">
+    <div className="flex flex-col w-full  max-w-100 items-center text-start  md:text-center gap-2 ">
       <Image
         src={imgSrc}
         alt={alt}
@@ -22,8 +22,8 @@ const ServiceCard = ({
         placeholder="empty"
         loading="lazy"
       />
-      <h2 className="text-2xl max-w-80">{serviceName}</h2>
-      <p className="text-sm max-w-80">{serviceDescription}</p>
+      <h3 className="text-base md:text-2xl font-semibold md:font-normal max-w-80">{serviceName}</h3>
+      <p className="text-sm max-w-80 text-justify">{serviceDescription}</p>
     </div>
   );
 };

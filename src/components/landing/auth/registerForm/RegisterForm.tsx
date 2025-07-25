@@ -74,7 +74,7 @@ const RegisterForm = () => {
     <FormProvider {...methods}>
       <form
         onSubmit={methods.handleSubmit(onSubmit)}
-        className="flex flex-col items-center gap-8 py-6 w-80"
+        className="flex flex-col items-center gap-8 py-3 md:py-6 w-80"
       >
         <div>
           {step === 1 && <StepPetData />}

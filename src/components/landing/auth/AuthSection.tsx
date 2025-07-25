@@ -3,11 +3,13 @@ const AuthSection = () => {
   return (
     <section
       id="form"
-      className="flex flex-col justify-center items-center bg-primary-pink-100  py-25 w-full gap-3  h-screen snap-center"
+      className="flex flex-col justify-center items-center bg-primary-pink-100  py-25 w-full gap-3 h-auto min-h-screen md:h-screen snap-center"
     >
       <h3 className=" font-bold">Welcome</h3>
       <h2 className="text-5xl">Get Started</h2>
-      <p className="text-base">Join our community of happy pet owners today!</p>
+      <p className="text-sm md:text-base w-80 md:w-100 ">
+        Join our community of happy pet owners today!
+      </p>
       <RegisterForm />
     </section>
   );
