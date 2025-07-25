@@ -1,3 +1,4 @@
+import { LoginDialog } from "@/components/landing/auth/loginDialog/LoginDialog";
 import ActionButton from "@/components/ui/ActionButton";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,18 +6,21 @@ import Link from "next/link";
 const Header = () => {
   return (
     <header className="bg-primary-pink-100 flex w-full justify-center">
-      <div className="flex h-10 w-330 items-center justify-between border-b-1 border-b-gray-400 px-8 py-8 md:h-18 md:px-0 md:py-12">
+      <div className="flex h-10 w-330 items-center justify-between border-b-1 border-b-gray-400 px-0 py-8 md:h-18 md:px-12 md:pt-18 md:pb-12">
         <nav className="flex gap-4">
-          <Link href="/" className="-ml-18 hidden object-contain md:block">
+          <Link
+            href="/"
+            className="relative hidden h-48 w-20 overflow-hidden md:block"
+          >
             <Image
               src="/picsvg_download (2).svg"
               alt="logo"
               width={200}
               height={200}
-              className="object-contain"
+              className="h-full object-cover"
             />
           </Link>
-          <div className="flex items-center gap-6 text-sm transition-all duration-300 md:text-base">
+          <div className="flex items-center gap-6 text-sm font-semibold transition-all duration-300 md:text-base">
             <a
               href="#services"
               className="hover:text-primary-pink-700 hidden transition md:block"
@@ -46,7 +50,7 @@ const Header = () => {
               Join
             </ActionButton>
           </a>
-          <ActionButton>Login</ActionButton>
+          <LoginDialog />
         </div>
       </div>
     </header>

@@ -54,21 +54,8 @@
 body {
   font-family: var(--font-sans);
 }
-input {
-  border: none;
-  border-radius: 12px;
-  padding: 4px;
-  padding-left: 8px;
-  font-family: var(--font-sans);
-  min-height: 36px;
-}
-input:focus {
-  outline: none;
-  border: 2px solid var(--color-primary-pink-500);
-}
 
 button {
   padding: 4px;
-  min-width: 3rem;
   font-family: var(--font-sans);
 }

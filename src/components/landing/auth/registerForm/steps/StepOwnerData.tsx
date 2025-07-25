@@ -1,3 +1,4 @@
+import Input from "@/components/ui/Input";
 import { useFormContext } from "react-hook-form";
 
 const StepOwnerData = () => {
@@ -6,7 +7,7 @@ const StepOwnerData = () => {
     <div className="flex w-80 flex-col gap-4 md:w-100">
       <label className="flex flex-col">
         <p className="text-sm"> Your name</p>
-        <input
+        <Input
           type="text"
           {...register("ownerName", { required: true })}
           className="bg-custom-gray-100"
@@ -14,7 +15,7 @@ const StepOwnerData = () => {
       </label>
       <label className="flex flex-col">
         <p className="text-sm"> Email</p>
-        <input
+        <Input
           type="email"
           {...register("ownerEmail", { required: true })}
           className="bg-custom-gray-100"
@@ -22,7 +23,7 @@ const StepOwnerData = () => {
       </label>
       <label className="flex flex-col">
         <p className="text-sm"> Phone</p>
-        <input
+        <Input
           type="tel"
           {...register("ownerTel")}
           className="bg-custom-gray-100"
@@ -30,7 +31,7 @@ const StepOwnerData = () => {
       </label>
       <label className="flex flex-col">
         <p className="text-sm"> Password</p>
-        <input
+        <Input
           type="password"
           {...register("password")}
           className="bg-custom-gray-100"

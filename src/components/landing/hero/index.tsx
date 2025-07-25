@@ -3,7 +3,10 @@ import ActionButton from "../../ui/ActionButton";
 
 const HeroSection = () => {
   return (
-    <div className="bg-primary-pink-100 flex h-auto min-h-screen w-full snap-center flex-col items-center justify-center px-12 pb-25 md:h-screen">
+    <section
+      id="hero"
+      className="bg-primary-pink-100 flex h-auto min-h-screen w-full snap-center flex-col items-center justify-center px-8 pb-25 md:h-screen md:px-12"
+    >
       <div className="flex max-w-320 flex-col items-center justify-between gap-2 py-8 md:flex-row md:gap-6">
         <h1 className="text-2xl leading-8 font-semibold wrap-break-word md:min-w-100 md:text-6xl md:leading-18 md:font-normal">
           Your Trusted Companion for Pet Sitting
@@ -24,7 +27,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="h-70 overflow-hidden rounded-2xl md:h-150">
+      <div className="mb-10 h-90 overflow-hidden rounded-2xl md:h-150">
         <Image
           priority
           src="/dog-1868871_1280.webp"
@@ -34,7 +37,7 @@ const HeroSection = () => {
           className="h-full object-cover object-[center_40%]"
         />
       </div>
-    </div>
+    </section>
   );
 };
 export default HeroSection;

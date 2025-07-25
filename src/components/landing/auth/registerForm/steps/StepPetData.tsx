@@ -1,4 +1,5 @@
 import DatePickerField from "@/components/ui/DatepickerField";
+import Input from "@/components/ui/Input";
 import { Controller, useFormContext } from "react-hook-form";
 const StepPetData = () => {
   const { register, control } = useFormContext();
@@ -6,7 +7,7 @@ const StepPetData = () => {
     <div className="flex w-80 flex-col gap-4 md:w-100">
       <label className="flex flex-col gap-1">
         <span className="text-sm">Pet name</span>
-        <input
+        <Input
           type="text"
           {...register("petName", { required: true })}
           className="bg-custom-gray-100"
@@ -47,7 +48,7 @@ const StepPetData = () => {
             <input
               type="checkbox"
               {...register("petAnimalgression")}
-              className="bg-custom-gray-100 size-3"
+              className="bg-custom-gray-100 accent-primary-pink-700 size-3"
             />
           </label>
           <label className="flex items-center justify-between gap-2">
@@ -55,7 +56,7 @@ const StepPetData = () => {
             <input
               type="checkbox"
               {...register("petPeopleAgression")}
-              className="bg-custom-gray-100 size-3"
+              className="bg-custom-gray-100 accent-primary-pink-700 size-3"
             />
           </label>
           <label className="flex items-center justify-between gap-2">
@@ -63,7 +64,7 @@ const StepPetData = () => {
             <input
               type="checkbox"
               {...register("petAnxiety")}
-              className="bg-custom-gray-100 size-3"
+              className="bg-custom-gray-100 accent-primary-pink-700 size-3"
             />
           </label>
           <label className="flex items-center justify-between gap-2">
@@ -71,7 +72,7 @@ const StepPetData = () => {
             <input
               type="checkbox"
               {...register("petHealthProblem")}
-              className="bg-custom-gray-100 size-3"
+              className="bg-custom-gray-100 accent-primary-pink-700 size-3"
             />
           </label>
           <label className="flex items-center justify-between gap-2">
@@ -79,7 +80,7 @@ const StepPetData = () => {
             <input
               type="checkbox"
               {...register("petChewing")}
-              className="bg-custom-gray-100 size-3"
+              className="bg-custom-gray-100 accent-primary-pink-700 size-3"
             />
           </label>
           <label className="flex items-center justify-between gap-2">
@@ -87,7 +88,7 @@ const StepPetData = () => {
             <input
               type="checkbox"
               {...register("petBarking")}
-              className="bg-custom-gray-100 size-3"
+              className="bg-custom-gray-100 accent-primary-pink-700 size-3"
             />
           </label>
         </div>

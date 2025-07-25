@@ -22,10 +22,10 @@ const ServiceCard = ({
         placeholder="empty"
         loading="lazy"
       />
-      <h3 className="max-w-80 text-base font-semibold md:text-2xl md:font-normal">
+      <h3 className="max-w-100 text-base font-semibold md:text-2xl md:font-normal">
         {serviceName}
       </h3>
-      <p className="max-w-80 text-justify text-sm">{serviceDescription}</p>
+      <p className="max-w-100 text-justify text-sm">{serviceDescription}</p>
     </div>
   );
 };
