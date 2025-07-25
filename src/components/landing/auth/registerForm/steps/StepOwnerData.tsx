@@ -3,7 +3,7 @@ import { useFormContext } from "react-hook-form";
 const StepOwnerData = () => {
   const { register } = useFormContext();
   return (
-    <div className="flex flex-col w-80 md:w-100 gap-4">
+    <div className="flex w-80 flex-col gap-4 md:w-100">
       <label className="flex flex-col">
         <p className="text-sm"> Your name</p>
         <input

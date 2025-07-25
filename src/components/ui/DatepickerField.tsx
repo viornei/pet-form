@@ -10,8 +10,8 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { useState } from "react";
 import { enGB } from "date-fns/locale";
+import { useState } from "react";
 
 type DatePickerFieldProps = {
   value?: Date;
@@ -34,7 +34,7 @@ export default function DatePickerField({
           <Button
             variant="outline"
             id="date"
-            className="justify-between font-normal rounded-xl  bg-custom-gray-100 border-0 focus:outline-none focus:ring-2 focus:ring-primary-pink-500 "
+            className="bg-custom-gray-100 focus:ring-primary-pink-500 justify-between rounded-xl border-0 font-normal focus:ring-2 focus:outline-none"
           >
             <span className="pl-1">
               {value ? value.toLocaleDateString("en-GB") : "Select date"}
@@ -43,7 +43,7 @@ export default function DatePickerField({
           </Button>
         </PopoverTrigger>
         <PopoverContent
-          className="max-w-100 min-w-40  w-auto overflow-hidden bg-white p-0"
+          className="w-auto max-w-100 min-w-40 overflow-hidden bg-white p-0"
           align="start"
         >
           <Calendar

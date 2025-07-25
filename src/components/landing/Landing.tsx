@@ -11,7 +11,7 @@ type TStoryData = {
 
 export const LandingPage = ({ services }: TStoryData) => {
   return (
-    <div className="h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth">
+    <div className="h-screen snap-y snap-mandatory overflow-y-auto scroll-smooth">
       <HeroSection />
       <ServiceSection blocks={services} />
       <AuthSection />

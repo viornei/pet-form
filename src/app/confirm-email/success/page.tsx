@@ -1,7 +1,7 @@
 "use client";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/supabaseClient";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function SuccessPage() {
   const router = useRouter();
@@ -56,7 +56,7 @@ export default function SuccessPage() {
   }, [router]);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="flex min-h-screen flex-col items-center justify-center">
       <p className="text-xl">We confirm registration... 🐾</p>
     </div>
   );

@@ -3,17 +3,17 @@ import { Controller, useFormContext } from "react-hook-form";
 const StepPetData = () => {
   const { register, control } = useFormContext();
   return (
-    <div className="flex flex-col w-80 md:w-100 gap-4">
+    <div className="flex w-80 flex-col gap-4 md:w-100">
       <label className="flex flex-col gap-1">
         <span className="text-sm">Pet name</span>
         <input
           type="text"
           {...register("petName", { required: true })}
-          className="bg-custom-gray-100 "
+          className="bg-custom-gray-100"
         />
       </label>
       <div className="flex gap-4">
-        <label className="flex gap-1 items-center">
+        <label className="flex items-center gap-1">
           <input
             id="dog"
             type="radio"
@@ -23,7 +23,7 @@ const StepPetData = () => {
           />
           <span className="text-sm"> Dog </span>
         </label>
-        <label className="flex gap-1 items-center">
+        <label className="flex items-center gap-1">
           <input
             id="cat"
             type="radio"
@@ -42,7 +42,7 @@ const StepPetData = () => {
       <div className="flex flex-col gap-1">
         <span className="text-sm">Behavioral traits</span>
         <div className="grid grid-cols-2 gap-x-10 gap-y-0.5 text-sm md:text-base">
-          <label className="flex items-center gap-2 justify-between">
+          <label className="flex items-center justify-between gap-2">
             <span> Animal agression</span>
             <input
               type="checkbox"
@@ -50,7 +50,7 @@ const StepPetData = () => {
               className="bg-custom-gray-100 size-3"
             />
           </label>
-          <label className="flex items-center gap-2 justify-between">
+          <label className="flex items-center justify-between gap-2">
             <span>People agression</span>
             <input
               type="checkbox"
@@ -58,7 +58,7 @@ const StepPetData = () => {
               className="bg-custom-gray-100 size-3"
             />
           </label>
-          <label className="flex items-center gap-2 justify-between">
+          <label className="flex items-center justify-between gap-2">
             <span>Separation anxiety</span>
             <input
               type="checkbox"
@@ -66,7 +66,7 @@ const StepPetData = () => {
               className="bg-custom-gray-100 size-3"
             />
           </label>
-          <label className="flex items-center gap-2 justify-between">
+          <label className="flex items-center justify-between gap-2">
             <span>Health Problem</span>
             <input
               type="checkbox"
@@ -74,7 +74,7 @@ const StepPetData = () => {
               className="bg-custom-gray-100 size-3"
             />
           </label>
-          <label className="flex items-center gap-2 justify-between">
+          <label className="flex items-center justify-between gap-2">
             <span>Chewing</span>
             <input
               type="checkbox"
@@ -82,7 +82,7 @@ const StepPetData = () => {
               className="bg-custom-gray-100 size-3"
             />
           </label>
-          <label className="flex items-center gap-2 justify-between">
+          <label className="flex items-center justify-between gap-2">
             <span>Excessive barking</span>
             <input
               type="checkbox"

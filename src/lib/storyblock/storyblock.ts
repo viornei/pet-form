@@ -2,8 +2,8 @@ import LandingPage from "@/components/landing/Landing";
 import ServiceSection from "@/components/landing/servicesSection/ServicesSection";
 import {
   apiPlugin,
-  storyblokInit,
   getStoryblokApi,
+  storyblokInit,
   StoryblokStory,
 } from "@storyblok/react/rsc";
 

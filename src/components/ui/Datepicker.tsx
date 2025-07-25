@@ -6,7 +6,7 @@ const DatePicker = () => {
   const [date, setDate] = useState<Date | undefined>(new Date(2025, 5, 12));
   const bookedDates = Array.from(
     { length: 12 },
-    (_, i) => new Date(2025, 5, 15 + i)
+    (_, i) => new Date(2025, 5, 15 + i),
   );
 
   return (
@@ -23,7 +23,6 @@ const DatePicker = () => {
         booked: "[&>button]:line-through opacity-100",
       }}
       className="rounded-lg border shadow-lg"
-      
     />
   );
 };

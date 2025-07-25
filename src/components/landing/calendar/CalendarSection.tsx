@@ -5,10 +5,10 @@ const CalendarSection = () => {
   return (
     <section
       id="calendar"
-      className="flex w-full items-center bg-primary-pink-100  py-25 px-12 scroll-mt-24 h-auto min-h-screen md:h-screen snap-center justify-center"
+      className="bg-primary-pink-100 flex h-auto min-h-screen w-full snap-center scroll-mt-24 items-center justify-center px-12 py-25 md:h-screen"
     >
-      <div className="flex  flex-col md:flex-row gap-10 max-w-330 w-full  items-center justify-between  mx-auto">
-        <div className="flex flex-col  max-w-160 md:gap-6">
+      <div className="mx-auto flex w-full max-w-330 flex-col items-center justify-between gap-10 md:flex-row">
+        <div className="flex max-w-160 flex-col md:gap-6">
           <div className="flex flex-col gap-4">
             <h2 className="text-5xl">Calendar</h2>
             <h3 className="text-xl font-semibold">

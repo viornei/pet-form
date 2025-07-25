@@ -1,12 +1,9 @@
 const Gallery = () => {
   return (
-    <section
-      id="faq"
-      className=" bg-primary-pink-100 w-full  gap-16  py-25 px-12"
-    >
-      <div className="flex items-center flex-col gap-20  w-full mx-auto">
-        <h2 className="text-5xl mb-8 mt-2 text-center">Gallery</h2>
-        <div className="max-w-160  w-full mx-auto flex flex-col gap-6">
+    <section id="faq" className="bg-primary-pink-100 w-full gap-16 px-12 py-25">
+      <div className="mx-auto flex w-full flex-col items-center gap-20">
+        <h2 className="mt-2 mb-8 text-center text-5xl">Gallery</h2>
+        <div className="mx-auto flex w-full max-w-160 flex-col gap-6">
           <p> Text </p>
           <div>gallery</div>
         </div>
@@ -14,5 +11,4 @@ const Gallery = () => {
     </section>
   );
 };
-
 export default Gallery;
