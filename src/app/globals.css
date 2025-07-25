@@ -4,7 +4,6 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-
   --font-sans: var(--font-lora);
   --font-heading: var(--font-libre-baskerville);
   --radius: 0.625rem;
@@ -55,17 +54,8 @@
 body {
   font-family: var(--font-sans);
 }
-input {
-  border: none;
-  border-radius: 12px;
-  padding: 4px;
-  padding-left: 8px;
-  font-family: var(--font-sans);
-  min-height: 36px;
-}
 
 button {
   padding: 4px;
-  min-width: 3rem;
   font-family: var(--font-sans);
 }

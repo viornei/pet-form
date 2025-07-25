@@ -1,11 +1,11 @@
 "use client";
-import { FormProvider, useForm } from "react-hook-form";
-import StepPetData from "./steps/StepPetData";
-import StepOwnerData from "./steps/StepOwnerData";
-import { useState } from "react";
 import ActionButton from "@/components/ui/ActionButton";
 import { createClient } from "@/lib/supabase/supabaseClient";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { FormProvider, useForm } from "react-hook-form";
+import StepOwnerData from "./steps/StepOwnerData";
+import StepPetData from "./steps/StepPetData";
 
 type PetData = {
   petName: string;
@@ -74,7 +74,7 @@ const RegisterForm = () => {
     <FormProvider {...methods}>
       <form
         onSubmit={methods.handleSubmit(onSubmit)}
-        className="flex flex-col items-center gap-8 py-6 w-80"
+        className="flex w-80 flex-col items-center gap-8 py-3 md:py-6"
       >
         <div>
           {step === 1 && <StepPetData />}

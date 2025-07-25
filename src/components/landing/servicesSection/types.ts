@@ -12,5 +12,4 @@ export type TServiceBlock = {
   Services: TService[];
 };
 
-
 export type TServiceSection = TServiceBlock[];

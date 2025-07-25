@@ -12,16 +12,16 @@ const Carousel = ({ images }: Props) => {
   };
   const prevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length,
     );
   };
   return (
-    <div className="relative w-full max-w-190 mx-auto py-25 ">
-      <div className="overflow-hidden relative h-50">
+    <div className="relative mx-auto w-full max-w-190 py-25">
+      <div className="relative h-50 overflow-hidden">
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-transform transform ${
+            className={`absolute inset-0 transform transition-transform ${
               index === currentIndex ? "translate-x-0" : "translate-x-full"
             }`}
           >
@@ -30,19 +30,19 @@ const Carousel = ({ images }: Props) => {
               alt={`Slide ${index}`}
               width={780}
               height={220}
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover"
             />
           </div>
         ))}
       </div>
       <button
-        className="absolute top-1/2 -left-35 -translate-y-1/2 rounded-2xl  bg-primary-pink-100 text-gray p-2"
+        className="bg-primary-pink-100 text-gray absolute top-1/2 -left-35 -translate-y-1/2 rounded-2xl p-2"
         onClick={prevSlide}
       >
         ←
       </button>
       <button
-        className="absolute top-1/2 -right-35 transform -translate-y-1/2 rounded-2xl  bg-primary-pink-100 text-gray p-2"
+        className="bg-primary-pink-100 text-gray absolute top-1/2 -right-35 -translate-y-1/2 transform rounded-2xl p-2"
         onClick={nextSlide}
       >
         →

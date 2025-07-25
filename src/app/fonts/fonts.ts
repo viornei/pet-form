@@ -8,7 +8,7 @@ export const libreBaskerville = Libre_Baskerville({
 });
 
 export const lora = Lora({
-  subsets: ["latin",'cyrillic'],
+  subsets: ["latin", "cyrillic"],
   weight: ["400", "500", "700"],
   variable: "--font-lora",
   display: "swap",

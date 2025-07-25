@@ -38,20 +38,20 @@ const FaqSection = () => {
   return (
     <section
       id="faq"
-      className="bg-primary-pink-100 h-screen snap-center flex items-center justify-center"
+      className="bg-primary-pink-100 flex h-auto min-h-screen snap-center items-center justify-center md:h-screen"
     >
-      <div className="flex flex-col items-center justify-start  gap-4 max-w-360 w-full px-12 ">
-        <div className="flex flex-col lg:flex-row  flex-grow-0 justify-between gap-20  w-full m-auto">
-          <div className="flex max-w-260  w-[60%] items-start  flex-col justify-start  gap-10 lg:gap-10 mx-auto">
-            <h2 className="text-3xl font-semibold mb-4 text-start">FAQs</h2>
-            <div className=" w-full mx-auto flex flex-col gap-6 h-110  overflow-y-auto">
+      <div className="flex w-full max-w-360 flex-col items-center justify-start gap-4 px-8 md:px-12">
+        <div className="m-auto flex w-full flex-grow-0 flex-col justify-between gap-20 lg:flex-row">
+          <div className="mx-auto flex w-full max-w-260 flex-col items-start justify-start gap-10 lg:w-[60%] lg:gap-10">
+            <h2 className="mb-4 text-start text-3xl font-semibold">FAQs</h2>
+            <div className="mx-auto flex h-110 w-full flex-col gap-6 overflow-y-auto">
               {faqs.map((faq, index) => (
                 <div
                   key={index}
-                  className=" w-full rounded-xl  justify-center  transition-all"
+                  className="w-full justify-center rounded-xl transition-all"
                 >
                   <button
-                    className="flex w-full py-8 font-semibold  text-xl justify-between items-center"
+                    className="flex w-full items-center justify-between py-8 font-semibold lg:text-xl"
                     onClick={() =>
                       setOpenIndex(openIndex === index ? null : index)
                     }
@@ -76,7 +76,7 @@ const FaqSection = () => {
                         openIndex === index
                           ? "max-h-100 opacity-100"
                           : "max-h-0 opacity-0"
-                      }  text-lg text-gray-700 leading-relaxed`}
+                      } p-1 text-justify text-sm leading-relaxed text-gray-700 md:text-lg`}
                     >
                       {faq.answer}
                     </div>
@@ -85,8 +85,8 @@ const FaqSection = () => {
               ))}
             </div>
           </div>
-          <div className="hidden lg:flex flex-col justify-center  lg:gap-y-10 s max-w-150 w-[40%] h-100">
-            <h3 className="text-3xl font-semibold mb-4 text-start">Why us?</h3>
+          <div className="s hidden h-100 w-full max-w-150 flex-col justify-center lg:flex lg:w-[40%] lg:gap-y-10">
+            <h3 className="mb-4 text-start text-3xl font-semibold">Why us?</h3>
             <p className="text-lg leading-relaxed text-gray-700">
               Because we care. Seriously — your pet gets attention, love, and
               consistent routines while you’re away. And you get peace of mind.
@@ -102,11 +102,11 @@ const FaqSection = () => {
           </div>
         </div>
 
-        <div className="flex gap-4 items-center">
+        <div className="flex items-center gap-4">
           <a href="#form">
             <ActionButton>Join</ActionButton>
           </a>
-          <ActionButton className="bg-gray-100 w-20 h-10 rounded-full  transition-all duration-100 font-bold border-b-4 border-gray-500 shadow-2xl hover:brightness-105 active:border-b-2 active:translate-y-0.5">
+          <ActionButton className="h-10 w-20 rounded-full border-b-4 border-gray-500 bg-gray-100 font-bold shadow-2xl transition-all duration-100 hover:brightness-105 active:translate-y-0.5 active:border-b-2">
             Login
           </ActionButton>
         </div>

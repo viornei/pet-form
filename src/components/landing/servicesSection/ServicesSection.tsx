@@ -11,10 +11,12 @@ const ServiceSection = ({ blocks }: Props) => {
   return (
     <section
       id="services"
-      className="flex flex-col items-center bg-primary-pink-100 w-full py-14 px-12 gap-20  h-screen snap-center justify-center"
+      className="bg-primary-pink-100 flex h-auto min-h-screen w-full snap-center flex-col items-center gap-6 px-12 py-8 md:h-screen md:gap-12 md:py-25"
     >
-      <h2 className="text-5xl text-center max-w-160">{block.Title}</h2>
-      <div className="flex gap-4 w-full max-w-320  justify-between">
+      <h2 className="max-w-160 text-center text-xl font-semibold md:text-5xl md:font-normal">
+        {block.Title}
+      </h2>
+      <div className="flex w-full max-w-320 flex-col justify-between gap-14 md:flex-row md:gap-8">
         {block.Services.map((service, index) => (
           <ServiceCard
             key={index}
