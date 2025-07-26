@@ -17,7 +17,7 @@ const Carousel = ({ images }: Props) => {
   };
   return (
     <div className="relative mx-auto w-full max-w-190 py-25">
-      <div className="relative h-50 overflow-hidden">
+      <div className="relative h-40 w-full overflow-hidden md:h-50">
         {images.map((image, index) => (
           <div
             key={index}
@@ -36,13 +36,13 @@ const Carousel = ({ images }: Props) => {
         ))}
       </div>
       <button
-        className="bg-primary-pink-100 text-gray absolute top-1/2 -left-35 -translate-y-1/2 rounded-2xl p-2"
+        className="bg-primary-pink-100 text-gray-500 absolute top-1/2 -left-4 -translate-y-1/2 rounded-2xl p-2 md:-left-35"
         onClick={prevSlide}
       >
         ←
       </button>
       <button
-        className="bg-primary-pink-100 text-gray absolute top-1/2 -right-35 -translate-y-1/2 transform rounded-2xl p-2"
+        className="bg-primary-pink-100 text-gray-500 absolute top-1/2 -right-4 -translate-y-1/2 transform rounded-2xl p-2 md:-right-35"
         onClick={nextSlide}
       >
         →
