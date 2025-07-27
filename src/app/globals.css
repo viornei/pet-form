@@ -50,12 +50,33 @@
   --font-sans: var(--font-lora);
   --font-heading: var(--font-libre-baskerville);
 }
+@utility text-fluid-h1 {
+  font-size: clamp(1.5rem, 5vw, 3.75rem);
+}
+@utility text-fluid-h2 {
+  font-size: clamp(1.25rem, 3vw, 3rem);
+  @apply font-semibold md:font-normal;
+}
+@utility text-fluid-h3 {
+  font-size: clamp(1rem, 1.75vw, 2rem);
+
+  @apply font-semibold md:font-normal;
+}
+@utility text-fluid-lg {
+  font-size: clamp(1rem, 1.5vw, 1.75rem);
+}
+@utility text-fluid-base {
+  font-size: clamp(0.75rem, 1.25vw, 1.5rem);
+}
+@utility section-container {
+  @apply bg-primary-pink-100 flex h-auto min-h-[50vh] w-full flex-col items-center justify-center px-8 pb-25 md:h-screen md:px-12;
+}
 
 body {
   font-family: var(--font-sans);
 }
 
 button {
-  padding: 4px;
+  padding: 0.25rem;
   font-family: var(--font-sans);
 }
