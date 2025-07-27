@@ -3,7 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { libreBaskerville, lora } from "./fonts/fonts";
 import "./globals.css";
-import Header from "@/components/layout/header/Header";
+import Header from "@/components/layout/header/header";
 export const metadata: Metadata = {
   title: "Your petsitter",
   description: "Find best petsitter for you",
