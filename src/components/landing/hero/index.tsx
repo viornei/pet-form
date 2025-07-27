@@ -3,16 +3,13 @@ import ActionButton from "../../ui/ActionButton";
 
 const HeroSection = () => {
   return (
-    <section
-      id="hero"
-      className="bg-primary-pink-100 flex h-auto min-h-screen w-full snap-center flex-col items-center justify-center px-8 pb-25 md:h-screen md:px-12"
-    >
+    <section id="hero" className="section-container">
       <div className="flex max-w-320 flex-col items-center justify-between gap-2 py-8 md:flex-row md:gap-6">
-        <h1 className="text-2xl leading-8 font-semibold wrap-break-word md:min-w-100 md:text-6xl md:leading-18 md:font-normal">
+        <h1 className="text-fluid-h1 font-semibold wrap-break-word md:max-w-125 md:min-w-100 md:leading-18 md:font-normal">
           Your Trusted Companion for Pet Sitting
         </h1>
         <div className="flex flex-col items-start gap-4">
-          <span className="py-4">
+          <span className="py-4 text-[clamp(1rem,1.25vw,2.5rem)]">
             Experience peace of mind while you are away. Our dedicated pet
             sitters ensure your furry friends receive all the love and care they
             deserve.

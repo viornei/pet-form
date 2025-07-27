@@ -36,14 +36,11 @@ const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState<null | number>(null);
 
   return (
-    <section
-      id="faq"
-      className="bg-primary-pink-100 flex h-auto min-h-screen snap-center items-center justify-center md:h-screen"
-    >
+    <section id="faq" className="section-container md:scroll-mt-20">
       <div className="flex w-full max-w-360 flex-col items-center justify-start gap-4 px-8 md:px-12">
         <div className="m-auto flex w-full flex-grow-0 flex-col justify-between gap-20 lg:flex-row">
-          <div className="mx-auto flex w-full max-w-260 flex-col items-start justify-start gap-10 lg:w-[60%] lg:gap-10">
-            <h2 className="mb-4 text-start text-3xl font-semibold">FAQs</h2>
+          <div className="mx-auto flex w-full max-w-260 flex-col items-start justify-start gap-4 lg:w-[60%] lg:gap-5">
+            <h2 className="text-fluid-h2 mb-4 p-1 text-start">FAQs</h2>
             <div className="mx-auto flex h-110 w-full flex-col gap-6 overflow-y-auto">
               {faqs.map((faq, index) => (
                 <div
@@ -51,14 +48,14 @@ const FaqSection = () => {
                   className="w-full justify-center rounded-xl transition-all"
                 >
                   <button
-                    className="flex w-full items-center justify-between py-8 font-semibold lg:text-xl"
+                    className="text-fluid-lg flex w-full items-center justify-between py-8 text-start font-semibold"
                     onClick={() =>
                       setOpenIndex(openIndex === index ? null : index)
                     }
                   >
                     {faq.question}
                     <span
-                      className={`transition-transform duration-600 ${
+                      className={`transition-transform duration-400 ${
                         openIndex === index ? "rotate-180" : ""
                       }`}
                     >
@@ -72,11 +69,11 @@ const FaqSection = () => {
                   </button>
                   {openIndex === index && (
                     <div
-                      className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      className={`overflow-hidden transition-all duration-300 ${
                         openIndex === index
                           ? "max-h-100 opacity-100"
                           : "max-h-0 opacity-0"
-                      } p-1 text-justify text-sm leading-relaxed text-gray-700 md:text-lg`}
+                      } text-fluid-base p-1 text-justify leading-relaxed text-gray-700`}
                     >
                       {faq.answer}
                     </div>
@@ -85,9 +82,9 @@ const FaqSection = () => {
               ))}
             </div>
           </div>
-          <div className="s hidden h-100 w-full max-w-150 flex-col justify-center lg:flex lg:w-[40%] lg:gap-y-10">
-            <h3 className="mb-4 text-start text-3xl font-semibold">Why us?</h3>
-            <p className="text-lg leading-relaxed text-gray-700">
+          <div className="hidden h-100 w-full max-w-150 flex-col gap-4 lg:flex lg:w-[40%] lg:gap-y-10">
+            <h3 className="text-fluid-h2 mb-4 text-start">Why us?</h3>
+            <p className="text-fluid-base leading-relaxed text-gray-700">
               Because we care. Seriously — your pet gets attention, love, and
               consistent routines while you’re away. And you get peace of mind.
               We don’t just watch pets — we build trust. Whether it’s daily

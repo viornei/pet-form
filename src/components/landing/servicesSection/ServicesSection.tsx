@@ -9,14 +9,11 @@ const ServiceSection = ({ blocks }: Props) => {
 
   if (!block) return null;
   return (
-    <section
-      id="services"
-      className="bg-primary-pink-100 flex h-auto min-h-screen w-full snap-center flex-col items-center gap-6 px-12 py-8 md:h-screen md:gap-12 md:py-25"
-    >
-      <h2 className="max-w-160 text-center text-xl font-semibold md:text-5xl md:font-normal">
+    <section id="services" className="section-container md:scroll-mt-30">
+      <h2 className="text-fluid-h2 mb-4 max-w-160 text-center">
         {block.Title}
       </h2>
-      <div className="flex w-full max-w-320 flex-col justify-between gap-14 md:flex-row md:gap-8">
+      <div className="grid w-full max-w-320 grid-cols-1 justify-between gap-14 md:grid-cols-3 md:gap-8">
         {block.Services.map((service, index) => (
           <ServiceCard
             key={index}
