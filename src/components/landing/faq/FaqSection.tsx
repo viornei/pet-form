@@ -37,7 +37,7 @@ const FaqSection = () => {
 
   return (
     <section id="faq" className="section-container md:scroll-mt-20">
-      <div className="flex w-full max-w-360 flex-col items-center justify-start gap-4 px-8 md:px-12">
+      <div className="flex w-full max-w-360 flex-col items-center justify-start gap-4  md:px-12">
         <div className="m-auto flex w-full flex-grow-0 flex-col justify-between gap-20 lg:flex-row">
           <div className="mx-auto flex w-full max-w-260 flex-col items-start justify-start gap-4 lg:w-[60%] lg:gap-5">
             <h2 className="text-fluid-h2 mb-4 p-1 text-start">FAQs</h2>
