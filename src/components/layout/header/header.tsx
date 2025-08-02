@@ -1,6 +1,7 @@
 "use client";
 import { LoginDialog } from "@/components/landing/auth/loginDialog/LoginDialog";
 import ActionButton from "@/components/ui/ActionButton";
+import { MobileMenu } from "@/components/ui/MobileMenu";
 import { createClient } from "@/lib/supabase/supabaseClient";
 import { useUserStore } from "@/store/useUserStore";
 import Image from "next/image";
@@ -17,6 +18,11 @@ const Header = () => {
   };
   return (
     <header className="bg-primary-pink-100 sticky top-0 flex w-full justify-center">
+      <div className="flex w-full justify-between px-4 py-4 md:hidden items-center">
+        <MobileMenu />
+        <LoginDialog />
+      </div>
+
       <div className="hidden h-10 w-330 items-center justify-between border-b-1 border-b-gray-400 px-4 py-8 md:flex md:px-12 md:pt-18 md:pb-12">
         <Link
           href="/"
