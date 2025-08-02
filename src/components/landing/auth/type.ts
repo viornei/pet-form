@@ -1,4 +1,3 @@
-
 type PetData = {
   petName: string;
   petType: "cat" | "dog";
@@ -9,6 +8,7 @@ type PetData = {
   petHealthProblem: boolean;
   petChewing: boolean;
   petBarking: boolean;
+  petGender?: "male" | "female";
 };
 
 type OwnerData = {
@@ -16,6 +16,7 @@ type OwnerData = {
   ownerEmail: string;
   ownerTel: number;
   password: string;
+  aiFormCompleted: boolean;
 };
 
 export type TClientProfileData = PetData & OwnerData;

@@ -7,7 +7,8 @@ type ProfileState = {
   clearProfile: () => void;
 };
 
-export const useClientProfileStore = create<ProfileState>((set) => ({
+export const useClientProfileStore = create<ProfileState>((set
+) => ({
   profile: null,
   setProfile: (profile) => set({ profile }),
   clearProfile: () => set({ profile: null }),

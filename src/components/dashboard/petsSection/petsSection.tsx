@@ -7,10 +7,9 @@ const PetsSection = () => {
 
   return (
     <section id="pets" className="space-y-6">
-      <div className="flex items-center justify-between">
-      </div>
+      <div className="flex items-center justify-between"></div>
       {profile?.petName ? (
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid  item-start grid-cols-1 gap-6 md:grid-cols-2">
           <PetCard />
         </div>
       ) : (

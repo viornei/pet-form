@@ -4,6 +4,7 @@ export const normalizeProfileFromDB = (data: any): TClientProfileData => ({
   ownerName: data.owner_name,
   ownerTel: data.owner_tel,
   ownerEmail: "",
+  aiFormCompleted: data.ai_form_completed,
   password: "",
   petName: data.pet_name,
   petType: data.pet_type,
