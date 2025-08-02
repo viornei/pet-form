@@ -16,6 +16,7 @@ type OwnerData = {
   ownerEmail: string;
   ownerTel: number;
   password: string;
+  aiFormCompleted: boolean;
 };
 
 export type TClientProfileData = PetData & OwnerData;

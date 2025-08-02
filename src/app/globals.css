@@ -81,6 +81,5 @@ body {
 }
 
 button {
-  padding: 0.25rem;
   font-family: var(--font-sans);
 }

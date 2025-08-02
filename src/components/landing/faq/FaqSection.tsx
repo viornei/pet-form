@@ -48,7 +48,7 @@ const FaqSection = () => {
                   className="w-full justify-center rounded-xl transition-all"
                 >
                   <button
-                    className="text-fluid-lg flex w-full items-center justify-between py-8 text-start font-semibold"
+                    className="text-fluid-lg flex w-full items-center justify-between text-start font-semibold"
                     onClick={() =>
                       setOpenIndex(openIndex === index ? null : index)
                     }
@@ -84,7 +84,7 @@ const FaqSection = () => {
           </div>
           <div className="hidden h-100 w-full max-w-150 flex-col gap-4 lg:flex lg:w-[40%] lg:gap-y-10">
             <h3 className="text-fluid-h2 mb-4 text-start">Why us?</h3>
-            <p className="text-fluid-base leading-relaxed text-gray-700">
+            <p className="text-fluid-sm leading-relaxed text-gray-700">
               Because we care. Seriously — your pet gets attention, love, and
               consistent routines while you’re away. And you get peace of mind.
               We don’t just watch pets — we build trust. Whether it’s daily
