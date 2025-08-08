@@ -19,4 +19,7 @@ type OwnerData = {
   aiFormCompleted: boolean;
 };
 
-export type TClientProfileData = PetData & OwnerData;
+export type TClientProfileData = {
+  id: string;
+} & PetData &
+  OwnerData;

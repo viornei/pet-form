@@ -1,6 +1,7 @@
 import { TClientProfileData } from "@/components/landing/auth/type";
 
 export const normalizeProfileFromDB = (data: any): TClientProfileData => ({
+  id:data.id,
   ownerName: data.owner_name,
   ownerTel: data.owner_tel,
   ownerEmail: "",
