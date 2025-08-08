@@ -1,5 +1,5 @@
+import BookingCalendar from "@/components/features/booking/BookingCalendar";
 import ActionButton from "../../ui/ActionButton";
-import DatePicker from "../../ui/Datepicker";
 
 const CalendarSection = () => {
   return (
@@ -27,7 +27,7 @@ const CalendarSection = () => {
           </a>
         </div>
         <div className="mb-20">
-          <DatePicker />
+          <BookingCalendar />
         </div>
       </div>
     </section>

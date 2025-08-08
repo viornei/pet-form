@@ -9,7 +9,6 @@ export default async function Page() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-
   if (!user) redirect("/");
 
   const { data, error } = await supabase
@@ -18,7 +17,6 @@ export default async function Page() {
     .eq("user_id", user.id)
     .single();
 
-  const profile = data && !error ? normalizeProfileFromDB(data) : null;
-
-  return <DashBoardPage user={user} profile={profile} />;
+  if (!data) redirect("/");
+  return <DashBoardPage user={user} profile={normalizeProfileFromDB(data)} />;
 }
