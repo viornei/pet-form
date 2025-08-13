@@ -25,16 +25,16 @@ const BookingCalendar = ({ registrationId }: BookingCalendarProps) => {
   const userId = user?.id;
   const [bookings, setBookings] = useState<any[]>([]);
   const supabase = createClient();
+  const fetchBookings = async () => {
+    const { data, error } = await supabase.from("bookings").select("*");
+    if (error) console.error("Error:", error);
+    else setBookings(data ?? []);
+  };
 
   useEffect(() => {
-    const fetchBookings = async () => {
-      const { data, error } = await supabase.from("bookings").select("*");
-      if (error) console.error("Error:", error);
-      else setBookings(data ?? []);
-    };
-
     fetchBookings();
   }, []);
+
   const bookedDates = bookings
     .filter((b) => b.status === "paid")
     .map((b) => new Date(b.date));
@@ -81,7 +81,7 @@ const BookingCalendar = ({ registrationId }: BookingCalendarProps) => {
       datesToBook.map((date) => ({
         user_id: userId,
         registration_id: registrationId,
-        date: date.toISOString().split("T")[0],
+        date: date.toLocaleDateString("sv-SE"),
         status: "pending",
         pet_name: profile?.petName,
         owner_name: profile?.ownerName,
@@ -93,6 +93,7 @@ const BookingCalendar = ({ registrationId }: BookingCalendarProps) => {
     } else {
       console.log("Бронь создана");
       setSelectedDate(undefined);
+      await fetchBookings();
     }
   };
 
@@ -110,7 +111,7 @@ const BookingCalendar = ({ registrationId }: BookingCalendarProps) => {
         }}
         modifiersClassNames={{
           booked: "[&>button]:line-through opacity-100",
-          userPending: "[&>button]:bg-yellow-200",
+          userPending: "[&>button]:bg-pink-100 text-black-200",
         }}
         classNames={{
           range_start: "bg-primary-pink-500 text-white rounded-l-md",
@@ -138,7 +139,7 @@ const BookingCalendar = ({ registrationId }: BookingCalendarProps) => {
             createBooking();
           }}
         >
-          Book
+          Book stay
         </ActionButton>
       </div>
     </div>

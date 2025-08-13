@@ -17,16 +17,16 @@ const Header = () => {
     location.reload();
   };
   return (
-    <header className="bg-primary-pink-100 sticky top-0 flex w-full justify-center">
-      <div className="flex w-full justify-between px-4 py-4 md:hidden items-center">
+    <header className="bg-primary-pink-100 sticky top-0 z-50 flex w-full justify-center">
+      <div className="flex w-full items-center justify-between px-4 py-4 md:hidden">
         <MobileMenu />
         <LoginDialog />
       </div>
 
-      <div className="hidden h-10 w-330 items-center justify-between border-b-1 border-b-gray-400 px-4 py-8 md:flex md:px-12 md:pt-18 md:pb-12">
+      <div className="hidden h-6 w-330 items-center justify-between border-b-1 border-b-gray-400 px-4 py-8 md:flex md:px-12 md:pt-12 md:pb-10">
         <Link
           href="/"
-          className="relative hidden h-48 w-20 overflow-hidden md:block"
+          className="relative hidden h-36 w-20 overflow-hidden md:block"
         >
           <Image
             src="/picsvg_download (2).svg"
@@ -36,45 +36,54 @@ const Header = () => {
             className="h-full object-cover"
           />
         </Link>
-        <nav aria-label="Main navigation" className="flex gap-4">
-          <ul className="flex items-center gap-6 text-sm font-semibold transition-all duration-300 md:text-base">
-            <li>
-              <a
-                href="#services"
-                className="hover:text-primary-pink-700 hidden transition md:block"
-              >
-                Services
-              </a>
-            </li>
-            <li>
-              <a
-                href="#calendar"
-                className="hover:text-primary-pink-700 transition"
-              >
-                Calendar
-              </a>
-            </li>
-            <li>
-              <a href="#faq" className="hover:text-primary-pink-700 transition">
-                FAQ
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className="hover:text-primary-pink-700 hidden transition md:block"
-              >
-                Contact us
-              </a>
-            </li>
-          </ul>
-        </nav>
+
         {user ? (
-          <ActionButton onClick={handleLogout}>Log out</ActionButton>
+          <ActionButton
+            className="rounded-full border-b-4 border-gray-500 bg-gray-100 px-4 py-2 font-bold shadow-2xl transition-all duration-100 hover:brightness-105 active:translate-y-0.5 active:border-b-2"
+            onClick={handleLogout}
+          >
+            Log out
+          </ActionButton>
         ) : (
           <div className="flex items-center gap-4">
+            <nav aria-label="Main navigation" className="flex gap-4">
+              <ul className="flex items-center gap-6 text-sm font-semibold transition-all duration-300 md:text-base">
+                <li>
+                  <a
+                    href="#services"
+                    className="hover:text-primary-pink-700 hidden transition md:block"
+                  >
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#calendar"
+                    className="hover:text-primary-pink-700 transition"
+                  >
+                    Calendar
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#faq"
+                    className="hover:text-primary-pink-700 transition"
+                  >
+                    FAQ
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="hover:text-primary-pink-700 hidden transition md:block"
+                  >
+                    Contact us
+                  </a>
+                </li>
+              </ul>
+            </nav>
             <a href="#form">
-              <ActionButton className="h-10 w-20 rounded-full border-b-4 border-gray-500 bg-gray-100 font-bold shadow-2xl transition-all duration-100 hover:brightness-105 active:translate-y-0.5 active:border-b-2">
+              <ActionButton className="border-primary-pink-500 min-w-20 justify-self-end rounded-full border-b-4 bg-white px-4 py-2 font-bold shadow-2xl transition-all duration-100 hover:brightness-105 active:translate-y-0.5 active:border-b-2 md:block">
                 Join
               </ActionButton>
             </a>

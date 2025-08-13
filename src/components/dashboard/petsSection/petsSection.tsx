@@ -12,7 +12,7 @@ const PetsSection = () => {
           <PetCard />
         </div>
       )}
-      <ActionButton className="justify-self-end rounded-full border-b-4 border-gray-500 bg-gray-100 px-4 py-2 font-bold shadow-2xl transition-all duration-100 hover:brightness-105 active:translate-y-0.5 active:border-b-2 md:block">
+      <ActionButton className="border-primary-pink-500 min-w-20 justify-self-end rounded-full border-b-4 bg-white px-4 py-2 font-bold shadow-2xl transition-all duration-100 hover:brightness-105 active:translate-y-0.5 active:border-b-2 md:block">
         Add Pet
       </ActionButton>
     </div>
