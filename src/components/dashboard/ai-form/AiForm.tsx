@@ -110,10 +110,10 @@ const AiForm = () => {
   };
 
   return (
-    <div className="bg-white min-h-40 max-w-120 min-w-80 rounded-2xl border-2 border-white p-4 shadow md:min-w-120">
+    <div className="min-h-40 max-w-120 min-w-80 rounded-2xl border-2 border-white bg-white p-4 shadow md:min-w-120">
       {questions.length === 0 && (
         <div className="flex flex-col items-center justify-center gap-6">
-          <span className="text-fluid-sm">
+          <span className="md:text-fluid-sm text-sm">
             We have some more question about {profile.petName} to make sitting
             even more comfortable!
           </span>

@@ -101,9 +101,10 @@ const FaqSection = () => {
 
         <div className="flex items-center gap-4">
           <a href="#form">
-            <ActionButton>Join</ActionButton>
+            <ActionButton>
+              Join</ActionButton>
           </a>
-          <ActionButton className="h-10 w-20 rounded-full border-b-4 border-gray-500 bg-gray-100 font-bold shadow-2xl transition-all duration-100 hover:brightness-105 active:translate-y-0.5 active:border-b-2">
+              <ActionButton className="border-primary-pink-500 bg-white min-w-20 justify-self-end rounded-full border-b-4 px-4 py-2 font-bold shadow-2xl transition-all duration-100 hover:brightness-105 active:translate-y-0.5 active:border-b-2 md:block">
             Login
           </ActionButton>
         </div>

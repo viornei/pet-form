@@ -28,9 +28,11 @@ const DashBoardPage = ({ user, profile: initialProfile }: any) => {
             Manage your pets and book their stay with us
           </p>
         </div>
-        <div className="flex w-full justify-between align-top">
+        <div className="flex w-full flex-col justify-between gap-6 align-top md:flex-row">
           <BookingCalendar registrationId={profile?.id} />
-          <PetsSection />
+          <div className="hidden md:block">
+            <PetsSection />
+          </div>
         </div>
         <div className="flex items-start justify-between gap-4 py-2 md:py-12 lg:flex-row">
           {!profile?.aiFormCompleted && <AiForm />}
