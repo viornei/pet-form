@@ -1,3 +1,4 @@
+'use client'
 import useAmplitudeContext from "@/hooks/useAmplitudeContext";
 
 type Props = {
