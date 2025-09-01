@@ -4,6 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { libreBaskerville, lora } from "./fonts/fonts";
 import "./globals.css";
+import AmplitudeContextProvider from "@/providers/AmplitudeProvider";
 export const metadata: Metadata = {
   title: "Your petsitter",
   description: "Find best petsitter for you",
@@ -20,10 +21,12 @@ export default function RootLayout({
       className={`${libreBaskerville.variable} ${lora.variable} antialiased`}
     >
       <body className="bg-primary-pink-100 scroll-smooth">
+         <AmplitudeContextProvider>
         <Header />
         {children}
         <Footer />
         <SpeedInsights />
+        </AmplitudeContextProvider>
       </body>
     </html>
   );
