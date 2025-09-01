@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import BookingCalendar from "../features/booking/BookingCalendar";
 import AiForm from "./ai-form/AiForm";
 import PetsSection from "./petsSection/petsSection";
+import TableBooking from "./bookingsTable/Table";
 
 const DashBoardPage = ({ user, profile: initialProfile }: any) => {
   const { setUser } = useUserStore();
@@ -30,6 +31,7 @@ const DashBoardPage = ({ user, profile: initialProfile }: any) => {
         </div>
         <div className="flex w-full flex-col justify-between gap-6 align-top md:flex-row">
           <BookingCalendar registrationId={profile?.id} />
+          <TableBooking/>
           <div className="hidden md:block">
             <PetsSection />
           </div>
